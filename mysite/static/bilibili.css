@@ -1,0 +1,146 @@
+#header {
+    color: white;
+    background-color: #444444;
+    height: 70px;
+    line-height: 70px;
+    font-size: 35px;
+    padding-left: 50px;
+}
+
+#upper {
+    margin: 0px auto;
+    text-align: center;
+    height: 190px;
+}
+
+#url {
+    height: 45px;
+    width: 725px;
+    font-size: 30px;
+}
+
+.buttonload {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 8px 30px;
+}
+
+
+/* Add a right margin to each icon */
+
+.fa {
+    margin-left: -12px;
+    margin-right: 8px;
+}
+
+#download-youtube-button {
+    font-size: 25px;
+}
+
+#error-message {
+    margin: 0px auto;
+    width: 865px;
+    text-align: left;
+    font-size: 20px;
+    word-break: break-all;
+}
+
+#video-information {
+    background-color: white;
+    height: 158px;
+    width: 900px;
+    margin: 20px auto;
+    display: none;
+}
+
+#video-information-left {
+    display: inline-block;
+    height: 144px;
+    padding: 6px;
+}
+
+#video-information-right {
+    display: inline-block;
+    vertical-align: top;
+    height: 144px;
+    padding: 6px;
+    font-size: 20px;
+    width: 597px;
+    word-break: break-all;
+}
+
+#video-progressbar {
+    border: 1px black solid;
+    width: 517px;
+}
+
+#video-progress,
+#mp3cut-progress,
+#mp4cut-progress {
+    width: 0%;
+    height: 10px;
+    background-color: green;
+}
+
+#middle {
+    margin: 0px auto;
+    padding: 15px;
+    min-height: 365px;
+}
+
+#video {
+    margin: 10px auto;
+}
+
+#bottom {
+    color: white;
+    background-color: #444444;
+    height: 70px;
+    line-height: 70px;
+    font-size: 20px;
+    text-align: center;
+}
+
+#cut {
+    margin: 0 auto;
+    text-align: center;
+    font-size: 30px;
+    display: none;
+}
+
+#start-minute,
+#start-second,
+#end-minute,
+#end-second {
+    width: 100px;
+    height: 35px;
+    font-size: 25px;
+    text-align: right;
+}
+
+#mp3cut-button,
+#mp4cut-button {
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+#mp3cut,
+#mp4cut {
+    margin: 15px auto;
+    font-size: 25px;
+    display: none;
+}
+
+#mp3cut-progressbar,
+#mp4cut-progressbar {
+    border: 1px black solid;
+    width: 220px;
+    margin: 10px auto;
+}
+
+#mp3cut-download-link,
+#mp4cut-download-link {
+    font-size: 24px;
+    display: none;
+}

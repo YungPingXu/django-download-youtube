@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Online Bilibili to MP4 / MP3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+{% load static %}
+<script src="{% static 'bilibili.js' %}"></script>
+<link rel="stylesheet" href="{% static 'bilibili.css' %}">
+<style>
+    * {
+        font-family: 微軟正黑體;
+    }
+</style>
+
+<body style="margin: 0;background-color: #dcdcdc;">
+    <div id="header">Online bilibili to MP4 / MP3</div>
+    <div id="upper">
+        <br><br><span style="font-size: 50px;">bilibili 影片下載</span><br><br>
+        <input type="text" id="url" placeholder=" 輸入 bilibili 影片網址">
+        <button class="buttonload" id="download-youtube-button" onclick="download_youtube()">開始下載</button>
+    </div>
+    
+    <div id="middle">
+        <div id="error-message"></div>
+        <div id="video-information">
+            <div id="video-information-left">
+            </div>
+            <div id="video-information-right">
+                <span id="video-title"></span>
+                <br><span id="video-percent">正在轉換 0.0 %</span>
+                <div id="video-progressbar">
+                    <div id="video-progress"></div>
+                </div>
+                <a style="display: none;" id="download-link" href="" download>點此下載 mp4</a>
+            </div>
+        </div>
+        <video id="video" src="" style="display: none;" width="640" height="360" type="video/mp4" controls loop playsinline></video>
+        <input type="hidden" value="0" id="video-minute">
+        <input type="hidden" value="0" id="video-second">
+        <div id="cut">
+            <b>截取片段</b><br>起始時間<br>
+            <input type="text" value="0" id="start-minute">&nbsp:&nbsp<input type="text" value="0" id="start-second"><br> 結束時間
+            <br>
+            <input type="text" value="0" id="end-minute">&nbsp:&nbsp<input type="text" value="0" id="end-second"><br>
+            <button class="buttonload" id="mp3cut-button" onclick="mp3cut()">開始截取 mp3</button><br>
+            <div id="mp3cut">
+                <span id="mp3cut-percent">正在轉換 0.0 %</span>
+                <div id="mp3cut-progressbar">
+                    <div id="mp3cut-progress"></div>
+                </div>
+                <a id="mp3cut-download-link" href="" download>點此下載</a>
+            </div>
+            <button class="buttonload" id="mp4cut-button" onclick="mp4cut()">開始截取 mp4</button>
+            <div id="mp4cut">
+                <span id="mp4cut-percent">正在轉換 0.0 %</span>
+                <div id="mp4cut-progressbar">
+                    <div id="mp4cut-progress"></div>
+                </div>
+                <a id="mp4cut-download-link" href="" download>點此下載</a>
+            </div>
+        </div>
+    </div>
+    <div id="bottom">
+        Copyright © 版權所有 2020 All rights reserved.
+    </div>
+</body>
+
+</html>

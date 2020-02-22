@@ -1,0 +1,6 @@
+.vscode
+venv
+*.mp3
+*.mp4
+__pycache__
+db.sqlite3
