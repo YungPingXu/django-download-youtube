@@ -7,13 +7,13 @@ import os
 
 sched = BlockingScheduler()
 
-@sched.scheduled_job('interval', minutes=29)
+@sched.scheduled_job('interval', minutes=31)
 def timed_job_awake_your_app():
-    print('awake app every 29 minutes.')
+    print('awake app every 31 minutes.')
     url = 'https://online-download-youtube.herokuapp.com'
     requests.get(url)
-    shutil.rmtree('mysite/media')
+    """shutil.rmtree('mysite/media')
     os.mkdir('mysite/media')
-    os.mkdir('mysite/media/message')
+    os.mkdir('mysite/media/message')"""
 
 sched.start() 
