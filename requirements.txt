@@ -21,4 +21,4 @@ tqdm==4.42.1
 urllib3==1.25.8
 youtube-dl
 psycopg2
-APScheduler 
+APScheduler
