@@ -93,20 +93,18 @@ function search_youtube() {
     var search_text = document.getElementById("search-text").value;
     var output = "";
     var search = new XMLHttpRequest();
-    search.open("get", "https://www.googleapis.com/youtube/v3/search?key=AIzaSyALQ-eAj2UmVMZcqc4jFL9aCveaYgIP-v8&part=snippet&maxResults=20&q=" + search_text);
+    search.open("get", "https://www.googleapis.com/youtube/v3/search?key=AIzaSyALQ-eAj2UmVMZcqc4jFL9aCveaYgIP-v8&part=snippet&type=video&maxResults=30&q=" + search_text);
     search.onload = function() {
         var response = JSON.parse(this.responseText);
         for (var i = 0; i < response.items.length; i++) {
             var item = response.items[i];
-            if (item.id.kind == "youtube#video") {
-                var id = item.id.videoId;
-                var title = item.snippet.title;
-                //var imgurl = item.snippet.thumbnails.high.url;
-                output += '<div id="video-information" style="display: block;"><div id="video-information-left">';
-                output += '<img src="' + 'https://i.ytimg.com/vi/' + id + '/mqdefault.jpg' + '" height="144" width="256">';
-                output += '</div><div id="video-information-right"><span id="video-title">';
-                output += title + '</span><br><a id="download-link" href="/?url=https://www.youtube.com/watch?v=' + id + '">點此下載</a></div></div>';
-            }
+            var id = item.id.videoId;
+            var title = item.snippet.title;
+            //var imgurl = item.snippet.thumbnails.high.url;
+            output += '<div id="video-information" style="display: block;"><div id="video-information-left">';
+            output += '<img src="' + 'https://i.ytimg.com/vi/' + id + '/mqdefault.jpg' + '" height="144" width="256">';
+            output += '</div><div id="video-information-right"><span id="video-title">';
+            output += title + '</span><br><a id="download-link" href="/?url=https://www.youtube.com/watch?v=' + id + '">點此下載</a></div></div>';
         }
         document.getElementById("search").innerHTML = output;
         search_button.innerHTML = "開始搜尋";
