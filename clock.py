@@ -7,13 +7,16 @@ import os
 
 sched = BlockingScheduler()
 
-@sched.scheduled_job('interval', minutes=31)
+@sched.scheduled_job('interval', minutes=2)
 def timed_job_awake_your_app():
-    print('awake app every 32 minutes.')
+    print('awake app every 2 minutes.')
     url = 'https://online-download-youtube.herokuapp.com/'
     requests.get(url)
-    """shutil.rmtree('mysite/media')
-    os.mkdir('mysite/media')
-    os.mkdir('mysite/media/message')"""
+    if os.path.isdir('mysite/media'):
+        shutil.rmtree('mysite/media')
+    if not os.path.isdir('mysite/media'):
+        os.mkdir('mysite/media')
+    if not os.path.isdir('mysite/media/message'):
+        os.mkdir('mysite/media/message')
 
 sched.start() 
