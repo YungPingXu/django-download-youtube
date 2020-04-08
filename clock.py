@@ -7,7 +7,7 @@ import os
 
 sched = BlockingScheduler()
 
-@sched.scheduled_job('interval', minutes=2)
+@sched.scheduled_job('interval', minutes=29)
 def timed_job_awake_your_app():
     print('awake app every 2 minutes.')
     url = 'https://online-download-youtube.herokuapp.com/'
