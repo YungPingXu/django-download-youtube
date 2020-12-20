@@ -33,7 +33,7 @@ def stream_video(request, path):
     range_re = re.compile(r'bytes\s*=\s*(\d+)\s*-\s*(\d*)', re.I)
     range_match = range_re.match(range_header)
     size = os.path.getsize(path)
-    content_type, encoding = mimetypes.guess_type(path)
+    content_type = mimetypes.guess_type(path)
     content_type = content_type or 'application/octet-stream'
     if range_match:
         first_byte, last_byte = range_match.groups()

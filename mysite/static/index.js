@@ -12,8 +12,10 @@ function download_youtube() {
     get_title.onload = function() {
         title = get_title.responseText.split("<br>")[0].replace(/\\/g, "").replace(/\//g, "").replace(/\?/g, "").replace(/\"/g, "").replace(/\|/g, "").replace(/\*/g, "").replace(/\</g, "").replace(/\>/g, "").replace(/\:/g, "").replace(/\#/g, "").replace(/\&/g, "").replace(/\+/g, "");;
         if (get_title.responseText.split("<br>")[0] == "error.") {
-            var output = get_title.responseText.replace("error.<br>", "");
-            error_message.innerHTML = output;
+			alert("你輸入的影片網址不正確!");
+			console.log(get_title.responseText.replace("error.<br>", ""));
+            /*var output = get_title.responseText.replace("error.<br>", "");
+            error_message.innerHTML = output;*/
             download_youtube_button.disabled = false;
             download_youtube_button.innerHTML = "開始下載";
         } else {
@@ -93,7 +95,7 @@ function search_youtube() {
     var search_text = document.getElementById("search-text").value;
     var output = "";
     var search = new XMLHttpRequest();
-    search.open("get", "https://www.googleapis.com/youtube/v3/search?key=AIzaSyBHb-0WDU7REl75bG9ErqPrC7XXggvHtj0&part=snippet&type=video&maxResults=30&q=" + search_text);
+    search.open("get", "https://www.googleapis.com/youtube/v3/search?key=AIzaSyCmmkRL-vE3Q6CLkv00nn-l2JQqppcd8GA&part=snippet&type=video&maxResults=30&q=" + search_text);
     search.onload = function() {
         var response = JSON.parse(this.responseText);
         for (var i = 0; i < response.items.length; i++) {

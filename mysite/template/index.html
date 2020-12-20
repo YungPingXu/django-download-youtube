@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Online YouTube to MP4 / MP3</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 {% load static %}
 <script src="{% static 'index.js' %}"></script>
@@ -15,68 +16,68 @@
     }
 </style>
 
-<body style="margin: 0;background-color: #dcdcdc;">
-    <div id="header">Online YouTube to MP4 / MP3</div>
-    <div id="upper">
-        <br><br><span style="font-size: 50px;">YouTube 影片下載</span><br><br>
-        <div id="upper-context">
-            此下載器也支援 Facebook 影片<br>
-            <a href="/bilibili/" style="font-size: 25px;">bilibili 影片下載器請點此進入</a>
-        </div>
-        <input type="text" id="url" placeholder=" 輸入 YouTube、Facebook 影片網址" value="{{url}}">
-        <button class="buttonload" id="download-youtube-button" onclick="download_youtube()">開始下載</button>
-        <br><input type="text" id="search-text" placeholder=" 輸入關鍵字搜尋 YouTube 影片">
-        <button class="buttonload" id="search-button" onclick="search_youtube()">開始搜尋</button>
-    </div>
-    <div id="error-message"></div>
-    <div id="video-information">
-        <div id="video-information-left">
-        </div>
-        <div id="video-information-right">
-            <span id="video-title"></span>
-            <br><span id="video-percent">正在轉換 0.0 %</span>
-            <div id="video-progressbar">
-                <div id="video-progress"></div>
-            </div>
-            <a style="display: none;" id="download-link" href="" download>點此下載 mp4</a>
-        </div>
-    </div>
-    <div id="middle">
-        <video id="video" src="" style="display: none;" width="640" height="360" type="video/mp4" controls loop playsinline></video>
-        <input type="hidden" value="0" id="video-minute">
-        <input type="hidden" value="0" id="video-second">
-        <div id="cut">
-            <b>截取片段</b><br>起始時間<br>
-            <input type="text" value="0" id="start-minute">&nbsp:&nbsp<input type="text" value="0" id="start-second"><br> 結束時間
-            <br>
-            <input type="text" value="0" id="end-minute">&nbsp:&nbsp<input type="text" value="0" id="end-second"><br>
-            <button class="buttonload" id="mp3cut-button" onclick="mp3cut()">開始截取 mp3</button><br>
-            <div id="mp3cut">
-                <span id="mp3cut-percent">正在轉換 0.0 %</span>
-                <div id="mp3cut-progressbar">
-                    <div id="mp3cut-progress"></div>
-                </div>
-                <a id="mp3cut-download-link" href="" download>點此下載</a>
-            </div>
-            <button class="buttonload" id="mp4cut-button" onclick="mp4cut()">開始截取 mp4</button>
-            <div id="mp4cut">
-                <span id="mp4cut-percent">正在轉換 0.0 %</span>
-                <div id="mp4cut-progressbar">
-                    <div id="mp4cut-progress"></div>
-                </div>
-                <a id="mp4cut-download-link" href="" download>點此下載</a>
-            </div>
-        </div>
-    </div>
-    <div id="search"></div>
-    <div id="tutorial">
-        若要下載 Facebook 影片 請在要下載的 Facebook 影片上按右鍵 -> 顯示影片網址<br> 網址即會出現在影片上方 這網址才是我們要貼的 Facebook 影片網址<br><br>
-        <img src="{% static 'tutorial1.PNG' %}" alt="" width="400" height="375">
-        <img src="{% static 'tutorial2.PNG' %}" alt="" width="400" height="375">
-    </div>
-    <div id="bottom">
-        Copyright © 版權所有 2020 All rights reserved.
-    </div>
+<body>
+	<div id="header">Online YouTube to MP4 / MP3</div>
+	<div id="upper">
+		<br><br><span id="title">YouTube 影片下載</span><br><br>
+		<div id="upper-context">
+			此下載器也支援 Facebook 影片<br>
+			<!--<a href="/bilibili/" style="font-size: 25px;">bilibili 影片下載器請點此進入</a>-->
+		</div>
+		<input type="text" id="url" placeholder=" 輸入 YouTube、Facebook 影片網址" value="{{url}}">
+		<button class="buttonload" id="download-youtube-button" onclick="download_youtube()">開始下載</button>
+		<br><input type="text" id="search-text" placeholder=" 輸入關鍵字搜尋 YouTube 影片">
+		<button class="buttonload" id="search-button" onclick="search_youtube()">開始搜尋</button>
+	</div>
+	<div id="error-message"></div>
+	<div id="video-information">
+		<div id="video-information-left">
+		</div>
+		<div id="video-information-right">
+			<span id="video-title"></span>
+			<br><span id="video-percent">正在轉換 0.0 %</span>
+			<div id="video-progressbar">
+				<div id="video-progress"></div>
+			</div>
+			<a style="display: none;" id="download-link" href="" download>點此下載 mp4</a>
+		</div>
+	</div>
+	<div id="middle">
+		<video id="video" src="" style="display: none;" width="640" height="360" type="video/mp4" controls loop playsinline></video>
+		<input type="hidden" value="0" id="video-minute">
+		<input type="hidden" value="0" id="video-second">
+		<div id="cut">
+			<b>截取片段</b><br>起始時間<br>
+			<input type="text" value="0" id="start-minute">&nbsp:&nbsp<input type="text" value="0" id="start-second"><br> 結束時間
+			<br>
+			<input type="text" value="0" id="end-minute">&nbsp:&nbsp<input type="text" value="0" id="end-second"><br>
+			<button class="buttonload" id="mp3cut-button" onclick="mp3cut()">開始截取 mp3</button><br>
+			<div id="mp3cut">
+				<span id="mp3cut-percent">正在轉換 0.0 %</span>
+				<div id="mp3cut-progressbar">
+					<div id="mp3cut-progress"></div>
+				</div>
+				<a id="mp3cut-download-link" href="" download>點此下載</a>
+			</div>
+			<button class="buttonload" id="mp4cut-button" onclick="mp4cut()">開始截取 mp4</button>
+			<div id="mp4cut">
+				<span id="mp4cut-percent">正在轉換 0.0 %</span>
+				<div id="mp4cut-progressbar">
+					<div id="mp4cut-progress"></div>
+				</div>
+				<a id="mp4cut-download-link" href="" download>點此下載</a>
+			</div>
+		</div>
+	</div>
+	<div id="search"></div>
+	<!--<div id="tutorial">
+		若要下載 Facebook 影片 請在要下載的 Facebook 影片上按右鍵 -> 顯示影片網址<br> 網址即會出現在影片上方 這網址才是我們要貼的 Facebook 影片網址<br><br>
+		<img src="{% static 'tutorial1.PNG' %}" alt="" width="400" height="375">
+		<img src="{% static 'tutorial2.PNG' %}" alt="" width="400" height="375">
+	</div>-->
+	<div id="bottom">
+		Copyright © 版權所有 2020 All rights reserved by 許永平.
+	</div>
 </body>
 
 </html>
