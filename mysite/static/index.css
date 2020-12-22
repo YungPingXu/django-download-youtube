@@ -16,7 +16,6 @@ html {
 #upper {
     margin: 0px auto;
     text-align: center;
-    height: 310px;
 }
 
 #upper-context {
@@ -104,7 +103,6 @@ html {
 }*/
 
 #middle {
-    width: 700px;
     margin: 0px auto;
     margin-bottom: 15px;
 }
@@ -188,15 +186,29 @@ body{
 	#video-information {
 		width: 95%;
 	}
+	#video-information-right {
+		width: 60%;
+		font-size: 18px;
+	}
+	#video-progressbar{
+		width: 95%;
+	}
+}
+@media(max-width: 775px){
 	img{
-		width:200px;
-		height:auto;
+		width: 200px;
+		height: auto;
+	}
+	#video-information {
+		height: 125px;
 	}
 	#video-information-right {
 		width: 60%;
+		font-size: 15px;
 	}
-	#video-information-right {
-		font-size: 18px;
+	video{
+		width: 95%;
+		height: auto;
 	}
 }
 @media(max-width: 630px){
@@ -208,44 +220,36 @@ body{
 	.buttonload{
 		margin: 10px;
 	}
-	#search{
-		margin-top: 100px;
-	}
 	img{
 		width:150px;
 		height:auto;
 	}
 	#video-information{
-		height: 120px;
+		height: 100px;
 	}
 	#video-information-right {
+		font-size: 12px;
 		width: 60%;
 	}
-	#video-information-right {
-		font-size: 15px;
-	}
-	#search{
-		margin-top: 120px;
+	#bottom{
+		font-size: 18px;
 	}
 }
 @media(max-width: 544px){
 	#header{
-		height: 140px;
 		text-align: center;
-	}
-	#bottom{
-		height: 80px;
-	}
-}
-@media(max-width: 525px){
-	#bottom{
-		line-height: 30px;
+		font-size: 25px;
 	}
 }
 #title{
 	font-size: 50px;
 }
 @media(max-width: 500px){
+	#header{
+		font-size: 19px;
+		line-height: 50px;
+		height: 50px;
+	}
 	#title{
 		font-size: 35px;
 	}
@@ -259,6 +263,30 @@ body{
 		font-size: 12px;
 		width: 55%;
 	}
+	#bottom{
+		font-size: 15px;
+		line-height: 20px;
+		height: 40px;
+	}
+
+	img{
+		width: 100%;
+	}
+	#video-information{
+		width: 95%;
+		height: auto;
+	}
+	#video-information-left{
+		display: block;
+		margin: 0 auto;
+		height: auto;
+	}
+	#video-information-right {
+		display: block;
+		height: auto;
+		width: auto;
+		font-size: 15px;
+	}
 }
 @media(max-width: 460px){
 	#url, #search-text{
@@ -266,18 +294,14 @@ body{
 		font-size: 18px;
 	}
 }
-@media(max-width: 440px){
+@media(max-width: 393px){
 	#header{
-		font-size: 25px;
+		font-size: 18px;
+		padding-left: 20px;
+		padding-right: 20px;
 	}
-	img{
-		width: 100%;
-	}
-	#video-information{
-		height: 300px;
-	}
-	#video-information-right {
-		width: 95%;
-		font-size: 15px;
+	#bottom{
+		padding-top: 10px;
+		height: 50px;
 	}
 }
