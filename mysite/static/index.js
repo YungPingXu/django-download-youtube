@@ -21,7 +21,7 @@ function download_youtube() {
         } else {
             error_message.innerHTML = "";
             var start_download = new XMLHttpRequest();
-            document.getElementById("video-information-left").innerHTML = '<img src="' + get_title.responseText.split("<br>")[1] + '" height="144" width="256">'
+            document.getElementById("video-information-left").innerHTML = '<img src="https://i.ytimg.com/vi/' + get_title.responseText.split("<br>")[1] + '/mqdefault.jpg" height="144" width="256">'
             document.getElementById("video-title").innerHTML = title;
             document.getElementById("video-percent").innerHTML = "正在轉換 0.0 %";
             document.getElementById("video-progress").style.width = "0%";

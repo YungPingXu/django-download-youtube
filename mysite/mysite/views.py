@@ -117,7 +117,7 @@ def bilibili_download(request):
 
 def get_title(request):
     url = request.GET['url']
-    process = Popen('youtube-dl --get-thumbnail --get-title -f bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4 \"' + url + '\"',
+    process = Popen('youtube-dl --get-id --get-title -f bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4 \"' + url + '\"',
                     stdout=PIPE, stderr=STDOUT, shell=True, universal_newlines=True, encoding="utf-8")
     output = ''
     error = False
