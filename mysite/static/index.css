@@ -114,12 +114,10 @@ html {
 #bottom {
     color: white;
     background-color: #444444;
-    height: 60px;
-    line-height: 40px;
-    font-size: 20px;
+    font-size: 18px;
 	text-align: center;
-	padding-top: 20px;
-
+	padding-top: 15px;
+	padding-bottom: 15px;
 	position: absolute;
     bottom: 0;
     width: 100%;
@@ -169,7 +167,7 @@ html {
 }
 
 #search{
-	margin-bottom: 100px;
+	margin-bottom: 170px;
 }
 
 body{
@@ -231,9 +229,6 @@ body{
 		font-size: 12px;
 		width: 60%;
 	}
-	#bottom{
-		font-size: 18px;
-	}
 }
 @media(max-width: 544px){
 	#header{
@@ -261,9 +256,7 @@ body{
 		width: 55%;
 	}
 	#bottom{
-		font-size: 15px;
-		line-height: 20px;
-		height: 40px;
+		font-size: 14px;
 	}
 
 	img{
@@ -296,9 +289,5 @@ body{
 		font-size: 18px;
 		padding-left: 20px;
 		padding-right: 20px;
-	}
-	#bottom{
-		padding-top: 10px;
-		height: 50px;
 	}
 }
