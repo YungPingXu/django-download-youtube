@@ -26,7 +26,7 @@ urlpatterns = [
     path('download/', download),
     path('mp3cut/', mp3cut),
     path('mp4cut/', mp4cut),
-    re_path(r'^media/(?P<path>.*)$', stream_video),
+    #re_path(r'^media/(?P<path>.*)$', stream_video),
     path('bilibili_get_title/', bilibili_get_title),
     path('bilibili_download/', bilibili_download),
     path('bilibili/', bilibili),
